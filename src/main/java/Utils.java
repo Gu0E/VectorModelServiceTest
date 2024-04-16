@@ -91,8 +91,7 @@ public class Utils {
     public static boolean valid(JSONObject result) {
         String success = result.getString("success");
         String embedding = result.getString("embedding");
-        if (success == null || success.equals("false")) return false;
-        return embedding != null && !embedding.isEmpty();
+        return success.equals("true") && embedding != null && !embedding.isEmpty();
     }
 
     /**

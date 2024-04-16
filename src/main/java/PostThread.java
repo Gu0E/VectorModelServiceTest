@@ -11,6 +11,7 @@ public class PostThread extends Thread {
     private final int index;
     private final int total;
 
+
     public PostThread(String url, List<String> texts, List<Long> results, int index, int total) {
         this.url = url;
         this.texts = texts;
@@ -22,6 +23,7 @@ public class PostThread extends Thread {
     @Override
     public void run() {
         for (int i = index; i < texts.size(); i += total) {
+            System.out.println(currentThread().getName() + " 提交的是第 "+ i + " 个任务");
             try {
                 String requestBody = Utils.setRequestBody(texts.get(i), Utils.getType());
                 String result = "";
@@ -31,28 +33,28 @@ public class PostThread extends Thread {
                 result = PostService.OKPost(requestBody, url);
                 endTime = System.currentTimeMillis();
                 JSONObject JSONResult = JSON.parseObject(result);
-                if (JSONResult == null || !Utils.valid(JSONResult)) {
-                    System.out.println(this.getName() +
-                            "本次提交的问题是: \"" + texts.get(i) +
-                            "\" \n\t" +
-                            "本次未接收到响应");
+                if (JSONResult !=null && Utils.valid(JSONResult)) {
+                    long costTime = endTime - startTime;
+//                    System.out.println(this.getName() +
+//                            "本次提交的问题是: \"" + texts.get(i) +
+//                            "\" \n\t" +
+//                            "本次的result是 " + result +
+//                            "\" \n\t" +
+//                            "本次的耗时是 " + costTime + " ms");
+//                    synchronized (PostService.class) {
+                        results.add(costTime);
+//                    }
+                } else {
+//                    System.out.println(this.getName() +
+//                            "本次提交的问题是: \"" + texts.get(i) +
+//                            "\" \n\t" +
+//                            "本次未接收到响应");
                     results.add(null);
                 }
-                else {
-                    long costTime = endTime - startTime;
-                    System.out.println(this.getName() +
-                            "本次提交的问题是: \"" + texts.get(i) +
-                            "\" \n\t" +
-                            "本次的result是 " + result +
-                            "\" \n\t" +
-                            "本次的耗时是 " + costTime + " ms");
-                    results.add(costTime);
-                }
-
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
         }
-        System.out.println(this.getName() + "执行完毕#########################");
+        System.out.println("##### " + this.getName() + " 执行完毕 #####");
     }
 }
