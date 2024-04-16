@@ -124,7 +124,11 @@ public class Utils {
         return properties.getProperty("TYPE");
     }
 
-    public static double fixAverage(List<Long> results) {
+    public static String getThreadCount() {
+        return properties.getProperty("THREAD_COUNT");
+    }
+
+    public static FixResult fixAverage(List<Long> results) {
         long sum = 0L;
         int cnt = 0;
         for (Long result : results) {
@@ -133,15 +137,7 @@ public class Utils {
                 cnt++;
             }
         }
-        return (double) sum / cnt;
-    }
-
-    public static int countNull(List<Long> results) {
-        int cnt = 0;
-        for (Long result : results) {
-            if (result == null) cnt++;
-        }
-        return cnt;
+        return new FixResult(((double) sum / cnt), cnt);
     }
 }
 

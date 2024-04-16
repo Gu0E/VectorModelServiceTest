@@ -26,12 +26,9 @@ public class PostThread extends Thread {
             System.out.println(currentThread().getName() + " 提交的是第 "+ i + " 个任务");
             try {
                 String requestBody = Utils.setRequestBody(texts.get(i), Utils.getType());
-                String result = "";
-                long startTime;
-                long endTime;
-                startTime = System.currentTimeMillis();
-                result = PostService.OKPost(requestBody, url);
-                endTime = System.currentTimeMillis();
+                long startTime = System.currentTimeMillis();
+                String result = PostService.OKPost(requestBody, url);
+                long endTime = System.currentTimeMillis();
                 JSONObject JSONResult = JSON.parseObject(result);
                 if (JSONResult !=null && Utils.valid(JSONResult)) {
                     long costTime = endTime - startTime;
