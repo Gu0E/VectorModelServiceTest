@@ -4,33 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bad03c6-5302-46b6-b848-f148eebb8644" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vectormodelservicetest.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FixResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FixResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PostThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PostThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RunTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RunTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TestN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FixResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FixResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PostService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PostThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PostThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RunTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RunTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TestN.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestN.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/NThreadTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/NThreadTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/textTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/textTest.class" afterDir="false" />
+    <list default="true" id="0bad03c6-5302-46b6-b848-f148eebb8644" name="更改" comment="8.30">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ListToTxt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ListToTxt.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +27,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -80,11 +56,32 @@
       <updated>1718381921556</updated>
       <workItem from="1718381922944" duration="301000" />
       <workItem from="1723791526280" duration="2641000" />
-      <workItem from="1724997626676" duration="369000" />
+      <workItem from="1724997626676" duration="940000" />
     </task>
+    <task id="LOCAL-00001" summary="8.30">
+      <option name="closed" value="true" />
+      <created>1724998247656</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1724998247656</updated>
+    </task>
+    <task id="LOCAL-00002" summary="8.30">
+      <option name="closed" value="true" />
+      <created>1724998301617</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1724998301617</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="8.30" />
+    <option name="LAST_COMMIT_MESSAGE" value="8.30" />
   </component>
 </project>
