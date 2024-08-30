@@ -2,10 +2,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.*;
 
 /**
@@ -18,11 +15,14 @@ import java.util.*;
 
 public class Utils {
     private static final Properties properties;//读配置路径
+    private static final String CONFIG_FILE = "application.properties";
+    private static final String JSONS_FILE = "kms.eecjeggchc.txt";
+    private static final String TEXTS_FILE = "texts.txt";
 
     static {
         properties = new Properties();
         InputStream inputStream = Utils.class.getClassLoader()
-                .getResourceAsStream("application.properties");
+                .getResourceAsStream(CONFIG_FILE);
         try {
             properties.load(inputStream);
         } catch (IOException e) {
@@ -30,8 +30,41 @@ public class Utils {
         }
     }
 
+    public static List<String> read() throws IOException {
+        List<String> lines = new ArrayList<>();
+        InputStream inputStream = Utils.class.getClassLoader().getResourceAsStream(TEXTS_FILE);
+        BufferedReader reader = null;
+        if (inputStream != null) {
+            reader = new BufferedReader(new InputStreamReader(inputStream));
+        }
+        String line;
+        if (reader != null) {
+            while ((line = reader.readLine()) != null) {
+                lines.add(line);
+            }
+        }
+        return lines;
+    }
+
+    public static List<String> readUltimate() throws IOException {
+        List<String> lines = new ArrayList<>();
+        InputStream inputStream = Utils.class.getClassLoader().getResourceAsStream(JSONS_FILE);
+        BufferedReader reader = null;
+        if (inputStream != null) {
+            reader = new BufferedReader(new InputStreamReader(inputStream));
+        }
+        String line;
+        if (reader != null) {
+            while ((line = reader.readLine()) != null) {
+                lines.add(line);
+            }
+        }
+        return lines;
+    }
+
     /**
      * 读取本地txt的每一行作为query
+     * 缺点：只能读本地的
      */
     public static List<String> readTxt(String filePath) {
         try {
@@ -85,6 +118,10 @@ public class Utils {
         return texts;
     }
 
+    public static List<String> getDirectTexts() {
+        return readTxt(getTextsPath());
+    }
+
     /**
      * 检查result是否有效
      */
@@ -120,6 +157,10 @@ public class Utils {
         return properties.getProperty("txt.path");
     }
 
+    public static String getTextsPath() {
+        return properties.getProperty("texts.path");
+    }
+
     public static String getType() {
         return properties.getProperty("TYPE");
     }
@@ -131,13 +172,15 @@ public class Utils {
     public static FixResult fixAverage(List<Long> results) {
         long sum = 0L;
         int cnt = 0;
+        int total = 0;
         for (Long result : results) {
+            total++;
             if (result != null) {
                 sum += result;
                 cnt++;
             }
         }
-        return new FixResult(((double) sum / cnt), cnt);
+        return new FixResult(((double) sum / cnt), cnt, total);
     }
 }
 

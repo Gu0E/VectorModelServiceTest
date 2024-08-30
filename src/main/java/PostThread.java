@@ -32,20 +32,20 @@ public class PostThread extends Thread {
                 JSONObject JSONResult = JSON.parseObject(result);
                 if (JSONResult !=null && Utils.valid(JSONResult)) {
                     long costTime = endTime - startTime;
-//                    System.out.println(this.getName() +
-//                            "本次提交的问题是: \"" + texts.get(i) +
-//                            "\" \n\t" +
+                    System.out.println(this.getName() +
+                            " 第 "+ i +" 次提交的问题是: \"" + texts.get(i) +
+                            "\" \n\t" +
 //                            "本次的result是 " + result +
 //                            "\" \n\t" +
-//                            "本次的耗时是 " + costTime + " ms");
+                            "本次的耗时是 " + costTime + " ms");
 //                    synchronized (PostService.class) {
                         results.add(costTime);
 //                    }
                 } else {
-//                    System.out.println(this.getName() +
-//                            "本次提交的问题是: \"" + texts.get(i) +
-//                            "\" \n\t" +
-//                            "本次未接收到响应");
+                    System.out.println(this.getName() +
+                            "本次提交的问题是: \"" + texts.get(i) +
+                            "\" \n\t" +
+                            "本次未接收到响应");
                     results.add(null);
                 }
             } catch (Exception e) {

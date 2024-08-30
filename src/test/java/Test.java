@@ -1,5 +1,3 @@
-import com.alibaba.fastjson.JSON;
-
 import java.io.IOException;
 import java.util.List;
 
@@ -9,7 +7,10 @@ import java.util.List;
  * @description
  * @since 2024/4/11 20:56
  */
-public class test {
+public class Test {
+    public static void main(String[] args) throws IOException {
+        System.out.println(Utils.readUltimate());
+    }
 }
 
 class NThreadTest {
@@ -22,7 +23,7 @@ class NThreadTest {
     }
 }
 
-class textTest {
+class TextTest {
     public static void main(String[] args) throws IOException {
         List<String> lines = Utils.readTxt(Utils.getPath());
         List<String> texts = Utils.getTexts(lines);

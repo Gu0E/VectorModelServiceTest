@@ -9,8 +9,5 @@
         <module name="VectorModelServiceTest" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="src" target="18" />
-    </bytecodeTargetLevel>
   </component>
 </project>
